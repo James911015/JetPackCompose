@@ -22,19 +22,25 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    GranText1("Test")
                 }
             }
         }
     }
 }
 
+@Preview(
+    name = "GranText1", heightDp = 50, widthDp = 200, showBackground = true,
+    showSystemUi = true,
+    apiLevel = 29
+)
 
-
-@Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
-    MyNewComposeTheme {
-        Greeting("Android")
-    }
+fun TestGranText1() {
+    GranText1(name = "Test")
+}
+
+@Composable
+fun GranText1(name:String) {
+    Text(text = "JAMES ARIAS_1 $name")
 }
